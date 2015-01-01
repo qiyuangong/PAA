@@ -75,7 +75,7 @@ if __name__ == '__main__':
         get_result_L(att_trees, data)
     elif flag == 'data':
         get_result_dataset(att_trees, data)
-    elif flag == 'ak':
+    elif flag == 'paa':
         if len_argv > 2:
             get_result_one(att_trees, data, K, L)
         else:
@@ -83,6 +83,6 @@ if __name__ == '__main__':
     elif flag =='':
         get_result_one(att_trees, data)
     else:
-        print "Usage: python anonymizer [k | l | data |ak]"
+        print "Usage: python anonymizer [k | l | data | paa]"
     print "Finish 1M_Separation_PAA!!"
     

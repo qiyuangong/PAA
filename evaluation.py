@@ -274,11 +274,9 @@ def evaluate_L(file_list, qd=2, s=5):
         print "Average Relative Error: %.2f%%" % (are*100)
 
 
-
 if __name__ == '__main__':
     print "Begin Evaluation"
     flag = ''
-    len_argv = len(sys.argv)
     qd = 2
     s = 5
     try:
@@ -295,7 +293,7 @@ if __name__ == '__main__':
         evaluate_s(file_list)
     elif flag == 'qd':
         evaluate_qd(file_list)
-    elif flag == 'are':
+    elif flag == 'one':
         evaluate_one(file_list, qd, s)
     elif flag == 'data':
         evaluate_dataset(file_list)
@@ -306,6 +304,6 @@ if __name__ == '__main__':
     elif flag =='':
         evaluate_one(file_list)
     else:
-        print "Usage: python evaluation [qd | s | are | data | k | l]"
+        print "Usage: python evaluation [qd | s | one | data | k | l]"
    
             
