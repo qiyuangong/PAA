@@ -3,6 +3,7 @@
 from PAA import PAA
 from utils.read_data import read_data, read_tree
 from utils.save_result import save_to_file
+from utils.make_tree import gen_gh_trees
 import sys, copy
 import pdb
 
@@ -64,6 +65,9 @@ if __name__ == '__main__':
         L = int(sys.argv[3])
     except:
         pass
+    print '*'*30
+    # make generalization hierarchies
+    gen_gh_trees()
     #read gentree tax
     att_trees = read_tree()
     #read record
@@ -84,5 +88,6 @@ if __name__ == '__main__':
         get_result_one(att_trees, data)
     else:
         print "Usage: python anonymizer [k | l | data | paa]"
-    print "Finish 1M_Separation_PAA!!"
+    print "Finish PAA!!"
+    print '*'*30
     
